@@ -87,12 +87,23 @@ const getAllUsers = catchError(async (req,res,next)=>{
     const getAllUsers = await User.find()
     res.json({message:'weee',getAllUsers})
 })
+
+// ? ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// * get specific User
+
+const getSpecificUsers = catchError(async (req,res,next)=>{
+    const getAllUsers = await User.findById(req.params.id)
+    res.json({message:'weee',getAllUsers})
+})
+
 export{
     signup,
     signin,
     updateUser,
     deleteUser,
     getAllUsers,
-    updateAll
+    updateAll,
+    getSpecificUsers
     
 }

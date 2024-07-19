@@ -215,5 +215,4 @@ export{
     taskByCatgryName,
     filterByOption,
     pagination
- 
 }
